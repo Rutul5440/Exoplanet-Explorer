@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-11T18:35:00Z",
+  "title": "Design System: Exoplanet Explorer",
+  "extensions": {
+    "colorMeta": {
+      "midnight-enamel": { "role": "neutral", "displayName": "Midnight Enamel", "canonical": "#0b1230" },
+      "enamel-panel": { "role": "neutral", "displayName": "Enamel Panel", "canonical": "#111f4a" },
+      "transit-cobalt": { "role": "primary", "displayName": "Transit Cobalt", "canonical": "#1e5bff" },
+      "signal-scarlet": { "role": "primary", "displayName": "Signal Scarlet", "canonical": "#e21d2d" },
+      "habitable-green": { "role": "secondary", "displayName": "Habitable Green", "canonical": "#22b14c" },
+      "solar-amber": { "role": "tertiary", "displayName": "Solar Amber", "canonical": "#ffc20e" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Top observatory title only." },
+      "headline": { "displayName": "Headline", "purpose": "Section and chart headers." },
+      "body": { "displayName": "Body", "purpose": "Controls, tables, and prose." },
+      "mono": { "displayName": "Measurement Mono", "purpose": "Tabular astronomical coordinates and metrics only." }
+    },
+    "motion": [
+      { "name": "ease-transit", "value": "160ms ease-out", "purpose": "Hover, active, and filter state transitions." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "1180px" },
+      { "name": "mobile", "value": "960px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Sync Action Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Chamfered scarlet CTA triggering on-demand NASA TAP synchronization.",
+      "html": "<button class=\"ds-btn-scarlet\">Sync NASA Archive</button>",
+      "css": ".ds-btn-scarlet { display: inline-flex; align-items: center; min-height: 36px; padding: 0 14px; background: #e21d2d; color: #ffffff; border: 1px solid #e21d2d; font-weight: 600; font-size: 13px; clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px); cursor: pointer; } .ds-btn-scarlet:hover { background: #f02839; } .ds-btn-scarlet:focus-visible { outline: 2px solid #7aa8ff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Enamel Panel",
+      "kind": "card",
+      "refersTo": "enamel-panel",
+      "description": "Flat midnight-enamel workspace container framed by a 1px porcelain hairline border.",
+      "html": "<div class=\"ds-enamel-panel\">Mass vs. Radius</div>",
+      "css": ".ds-enamel-panel { background: #111f4a; color: #ffffff; border: 1px solid rgba(255,255,255,0.22); border-radius: 6px; padding: 16px 20px; }"
+    },
+    {
+      "name": "Habitability Pill",
+      "kind": "chip",
+      "description": "Semantic habitable-zone classification badge.",
+      "html": "<span class=\"ds-pill\">Conservative HZ</span>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 600; background: rgba(34, 177, 76, 0.16); border: 1px solid rgba(34, 177, 76, 0.45); color: #5ce686; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Midnight Transit Diagram",
+    "overview": "Exoplanet Explorer translates the visual discipline of an enamel-fired metropolitan transit mural into a live NASA astronomical observatory dashboard.",
+    "keyCharacteristics": [
+      "Matte nocturnal enamel surfaces layered tonally with 1px porcelain-tinted borders instead of drop shadows.",
+      "Four semantic route inks assigned strictly to habitable-zone physics, discovery methods, active selection, and sync triggers.",
+      "Tabular numeric alignment isolated to physical coordinates and measurements while UI controls stay in humanist sans."
+    ],
+    "rules": [
+      { "name": "The Route-Ink Purity Rule", "body": "Never use emerald, amber, cobalt, or scarlet as decorative card accents; each hue encodes a single scientific or operational meaning across charts, orbital diagrams, and tables.", "section": "colors" },
+      { "name": "The Earned Monospace Rule", "body": "Monospace typography is restricted strictly to numerical measurements, coordinates, and timestamps (tabular-nums)—never used on prose labels or navigation buttons.", "section": "typography" }
+    ],
+    "dos": [
+      "Do keep numeric table columns right-aligned with .mono-num (tabular-nums) and show — for missing NASA measurements.",
+      "Do disclose derived physics fields (Kepler Orbit, Derived L☉) and sampled scatter counts (Showing X of Y) transparently.",
+      "Do respect prefers-reduced-motion: reduce across all transitions and skeleton shimmers."
+    ],
+    "donts": [
+      "Don't add eyebrow kickers above section headings, gradient text, decorative grid backgrounds, or thick colored border-left stripes on panels.",
+      "Don't nest bordered cards inside cards or hide core catalog controls behind unnecessary modal dialogs."
+    ]
+  }
+}
+
